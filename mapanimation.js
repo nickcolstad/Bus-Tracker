@@ -30,18 +30,38 @@ async function update(){
     const locations = await getBusLocations();
    
 
-    for (let i=0; i<locations.length; i++){
+     for (let i=0; i<locations.length; i++){
         const long = locations[i].attributes.longitude;
         const lat = locations[i].attributes.latitude;
         console.log(long, lat);
         locations.forEach(element => {
-            var oneMarker = new mapboxgl.Marker()
-            .setLngLat([long, lat])
-            .addTo(map);
-            currentMarkers.push(oneMarker)
-        });
-        
 
-}
+            const el = document.createElement('div');
+            el.className = 'marker';
+           
+            new mapboxgl.Marker(el)
+                .setLngLat([long, lat])
+                .addTo(map);
+                currentMarkers.push(el)
+        });
+    }
+
+    const MIT = document.createElement('div');
+    MIT.className = 'mitCampus';
+    new mapboxgl.Marker(MIT)
+    .setLngLat([-71.0942, 42.3601])
+    .addTo(map);
+
+    const HU = document.createElement('div');
+    HU.className = 'harvard';
+    new mapboxgl.Marker(HU)
+    .setLngLat([-71.1167, 42.3770])
+    .addTo(map);
+
+    const BU = document.createElement('div');
+    BU.className = 'BUCampus'
+    new mapboxgl.Marker(BU)
+    .setLngLat([-71.0985, 42.3495])
+    .addTo(map);
 }
 run();
