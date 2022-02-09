@@ -5,3 +5,33 @@ body { margin: 0; padding: 0; }
   left: 0;
   padding: 10px;
 }
+
+.marker {
+  background-image: url('bus.png');
+  background-size: cover;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.mitCampus {
+  background-image: url('MIT.png');
+  background-size: cover;
+  width: 100px;
+  height: 50px;
+  
+}
+
+ .harvard {
+  background-image: url('harvard.png');
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+}
+
+.BUCampus {
+  background-image: url('BU.png');
+  background-size: cover;
+  width: 100px;
+  height: 60px;
+}
