@@ -61,7 +61,7 @@ async function update(){
     const BU = document.createElement('div');
     BU.className = 'BUCampus'
     new mapboxgl.Marker(BU)
-    .setLngLat([-71.0985, 42.3495])
+    .setLngLat([-71.0984, 42.3495])
     .addTo(map);
 }
 run();
